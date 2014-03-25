@@ -1,5 +1,6 @@
 CrdSiteGsf::Application.routes.draw do
-  get "static_pages/home"
+  match '/about', to: 'static_pages#about'
+  match '/services', to: 'static_pages#services'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
