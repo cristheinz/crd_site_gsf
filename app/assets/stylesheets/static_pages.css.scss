@@ -38,10 +38,18 @@ margin-top: 20px;
 margin-bottom: -90px;
 }
 .carousel-caption {
-background-color: transparent;
-max-width: 600px;
+//background-color: transparent;
+max-width: 570px;
 padding: 80px;
-margin-top: 200px;
+margin-bottom: 70px;
+}
+@media (max-width: 767px) {
+  .carousel-caption {
+    position: relative;
+    //background-color: transparent;
+    //top:30px;
+    //padding-top:10px;
+  }
 }
 .carousel-caption h1, .carousel-caption .lead {
 //margin: 0;
