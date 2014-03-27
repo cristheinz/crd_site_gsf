@@ -39,14 +39,16 @@ margin-bottom: -90px;
 }
 .carousel-caption {
 //background-color: transparent;
-max-width: 570px;
-padding: 80px;
-margin-bottom: 70px;
+//max-width: 767px;
+min-height: 300px;
+padding-left: 100px;
+//margin-bottom: 3%;//140px;
 }
 @media (max-width: 767px) {
   .carousel-caption {
     position: relative;
-    //background-color: transparent;
+    padding:60px;
+    //background-color: gray;
     //top:30px;
     //padding-top:10px;
   }

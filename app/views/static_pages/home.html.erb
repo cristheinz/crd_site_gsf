@@ -1,27 +1,55 @@
-<div class="container" style="padding-top: 50px;padding-bottom: 100px;">
-	<div class="row">
-		<div class="span4" style="text-align: center">
+<div class="container" style="padding-top: 30px;padding-bottom: 100px;">
+	<div class="row" style="">
+		<div class="span4" style="text-align: center;padding-bottom: 30px;">
+			<%=image_tag 'https://cdn3.iconfinder.com/data/icons/wpzoom-developer-icon-set/500/130-128.png'%>
 			<h2>Mudanças</h2>
 			<p>Efectuamos todo o tipo de mudanças ao nível B2B e B2C. Trabalhamos com elevados patamares de profissionalismo, prontidão e dedicação.<br>
 			Atuamos em toda a zona da Grande Lisboa mas também um pouco por todo o país, em território nacional. Todo o nosso trabalho tem como premissa básica o cumprimento rigoroso dos horários.<br>
-			<!--As mudanças têm todas elas em comum uma origem e um destino e é indispensável um bom nível de preparação, de forma a tornar a mudança mais rápida e mais eficiente.--></p>
-			<!--<%=link_to 'mais detalhes', '#', class: 'btn'%>-->
 		</div>
-		<div class="span4" style="text-align: center;">
+		<div class="span4" style="text-align: center;padding-bottom: 30px;">
 			<h2>Facility Services</h2>
 			<p>Tendo como core business a prestação de serviços de recepção, portaria e zelação, o Grupo SF desenvolve a sua actividade com base nas necessidades específicas de cada cliente.<br>
 			Para alcançarmos este objectivo de modo a dar resposta às exigências actuais é essencial uma integração na cultura de cada cliente, respondendo de forma segura e objectiva aos requisitos da missão.<br>
-			<!--Com este rigor e elevado nível de exigência, foi possível construir sólidas relações com os nossos clientes que constituem as nossas referências e currículo, capacitando-nos para prestar serviços em clientes com características tão distintas, como condomínios de habitação, centros empresariais,comerciais, escritórios, complexos industriais, armazéns, hospitais e aindaeventos.<br>
-			Para além dos serviços-base nas áreas referidas, possuímos a flexibilidade fundamental para valorizar a nossa proposta comercial disponibilizando vários serviços complementares e de cortesia, visando um nível mais elevado de conforto e segurança aos nossos clientes.--></br></p>
-			<%=link_to 'saber mais', services_path, class: 'btn btn-primary'%>
+			<a data-toggle="collapse" data-parent="#accordion2" href="#collapseOne" class="btn btn-primary">saber mais</a>
 		</div>
-		<div class="span4" style="text-align: center;">
+		<div class="span4" style="text-align: center;padding-bottom: 30px;">
+			<%=image_tag 'https://cdn3.iconfinder.com/data/icons/wpzoom-developer-icon-set/500/128-128.png'%>
 			<h2>Limpezas</h2>
 			<p>Efetuamos vários tipos de limpezas:<br>
 			Escritórios<br>
 			Casas particulares<br>
 			Ocasionais e Periódicas<br></p>
-			<%=link_to 'Contacte-nos!', '#', class: 'btn btn-primary disabled'%>
+			<a href="#footer" class="btn btn-primary disabled">Contacte-nos!</a>
+		</div>
+	</div>
+	
+	<div class="" id="accordion2">
+		<div class="">
+			<div id="collapseOne" class=" collapse">
+				<hr class="featurette-divider">
+
+				<div class="row" id="service">
+       				<%=render 'static_pages/service'%>
+   				</div>
+			</div>
+		</div>
+	</div>
+	
+	<hr class="featurette-divider">
+	
+	<div class="row" id="about">
+		<div class="span12">
+			<h3>Sobre nós</h3>
+			<%=image_tag 'logo.jpg', align: 'right', class: 'img-polaroid'%>
+			<p>O Grupo SF Mudanças está sediado em Lisboa actuando em toda a zona da Grande Lisboa e de uma forma geral executa serviços de mudanças para todo o território nacional continental.</p>
+			<p>Para além da componente das mudanças, prestamos um conjunto de serviços tipicamente designados por Facility Services, ao nível da Gestão e Administração, na vertente de Condomínios, mas também ao nível de Centros de Escritórios e Centros Empresariais.</p>
+			<p>O nosso conceito passa por prestar um conjunto de serviços alargado no sentido de satisfazer o maior número de necessidades específicas das empresas ou dos particulares.</p>
+			<p>Poderá confiar o processo de mudança completo, a administração do seu condomínio, da sua propriedade, da sua quinta no Alentejo ou noutra parte do país, e ainda todos os serviços ao nível empresarial, tais como portaria, gestão do parque empresarial, centros de escritórios etc.</p>
+			<p>Tudo o que precisar poderá confiar no nosso Grupo!</p>
+			<p>O desempenho das nossas funções é transversal a muitos sectores de actividade consituindo uma mais-valia à nossa capacidade de prestação de serviço geral, permitindo-nos aplicar essa experiência e os conhecimentos obtidos nos outros clientes, permitindo antecipar ações e agir na prevenção.</p>
+		</div>
+		<div class="span4">
+			
 		</div>
 	</div>
 </div>

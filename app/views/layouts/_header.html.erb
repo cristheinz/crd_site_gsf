@@ -11,16 +11,28 @@
               <span class="icon-bar"></span>
             </button>
             <%=link_to 'Grupo SF Mudanças', root_path, class: 'brand'%>
-            <!--<a class="brand" href="#">Grupo SF Mudanças</a>-->
             <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
             <div class="nav-collapse collapse">
               <ul class="nav pull-right">
-                <li><%=link_to 'A Empresa', about_path %></li>
-                <li><%=link_to 'Facility Services', services_path %></li>
-                <!--<li><a href="#contact">Contactos</a></li>-->
+                <li><a id="roll1" href="#about">A Empresa</a></li>
+                <li><a id="roll2" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">Facility Services</a></li>
               </ul>
             </div><!--/.nav-collapse -->
           </div><!-- /.navbar-inner -->
         </div><!-- /.navbar -->
       </div> <!-- /.container -->
 </div>
+<script type="text/javascript">
+$(document).ready(function (){
+    $('#roll1').click(function() {
+		$('html, body').animate({
+    		scrollTop: $('#about').offset().top - $('html, body').offset().top + $('html, body').scrollTop()
+		}, 1500);
+  	});
+    $('#roll2').click(function() {
+		$('html, body').animate({
+    		scrollTop: $('#service').offset().top - $('html, body').offset().top + $('html, body').scrollTop()
+		}, 1500);
+  	});
+});
+</script>
