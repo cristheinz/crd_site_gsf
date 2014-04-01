@@ -4,4 +4,20 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-CrdSiteGsf::Application.config.secret_token = '27a886b867fa1f550bd740f889daeb463d0c39bb4684fe48c3b6368f54ff690beb949ead69d14b7963f2ae06929f5b857a3859cbd2646c5a01007d03bb37df36'
+require 'securerandom'
+
+def secure_token
+  token_file = Rails.root.join('.secret')
+  if File.exist?(token_file)
+    # Use the existing token.
+    File.read(token_file).chomp
+  else
+    # Generate a new token and store it in token_file.
+    token = SecureRandom.hex(64)
+    File.write(token_file, token)
+    token
+  end
+end
+
+#CrdSiteGsf::Application.config.secret_key_base = secure_token
+CrdSiteGsf::Application.config.secret_token = secure_token
