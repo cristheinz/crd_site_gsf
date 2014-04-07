@@ -14,8 +14,12 @@
             <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
             <div class="nav-collapse collapse">
               <ul class="nav pull-right">
-                <li><a id="roll1" href="#about">A Empresa</a></li>
+                <li><a id="roll1" data-toggle="collapse" data-target="#about" href="#about">A Empresa</a></li>
+                <li><a id="roll2" data-toggle="collapse" data-target="#service" href="#service">Facility Services</a></li>
+                <li><a id="roll3" data-toggle="collapse" data-target="#contact" href="#contact">Contactos</a></li>
+                <!--<li><a id="roll0" data-toggle="collapse" data-parent="#accordion2" href="#collapseZero">A Empresa</a></li>
                 <li><a id="roll2" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">Facility Services</a></li>
+                <li><a id="roll3" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">Contactos</a></li>-->
               </ul>
             </div><!--/.nav-collapse -->
           </div><!-- /.navbar-inner -->
@@ -24,15 +28,46 @@
 </div>
 <script type="text/javascript">
 $(document).ready(function (){
+	$('#faddress').show();
+	$('.collapse').collapse({
+  		toggle: false
+	})
+    /*$('#roll0').click(function() {
+		$('html, body').animate({
+    		scrollTop: $('#about').offset().top - $('html, body').offset().top + $('html, body').scrollTop()
+		}, 1500);
+		//$(".collapse").collapse();
+		//$('#collapseZero').collapse('show');
+		//$('#collapseOne').collapse('hide');
+		//$('#collapseTwo').collapse('hide');
+  	});*/
     $('#roll1').click(function() {
+    	$('#about').collapse('show');
+    	$('#service').collapse('hide');
+    	$('#contact').collapse('hide');
+    	$('#faddress').show();
 		$('html, body').animate({
     		scrollTop: $('#about').offset().top - $('html, body').offset().top + $('html, body').scrollTop()
 		}, 1500);
   	});
     $('#roll2').click(function() {
+    	$('#about').collapse('hide');
+    	$('#service').collapse('show');
+    	$('#contact').collapse('hide');
+    	$('#faddress').show();
 		$('html, body').animate({
-    		scrollTop: $('#service').offset().top - $('html, body').offset().top + $('html, body').scrollTop()
+    		scrollTop: $('#about').offset().top - $('html, body').offset().top + $('html, body').scrollTop()
 		}, 1500);
   	});
+    $('#roll3').click(function() {
+    	$('#about').collapse('hide');
+    	$('#service').collapse('hide');
+    	$('#contact').collapse('show');
+    	$('#faddress').hide();
+		$('html, body').animate({
+    		scrollTop: $('#about').offset().top - $('html, body').offset().top + $('html, body').scrollTop()
+		}, 1500);
+  	});
+  	
 });
 </script>
