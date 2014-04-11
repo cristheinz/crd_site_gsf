@@ -12,7 +12,11 @@ body {
 html,body{
     height: 100%
 }
-
+@media (max-width: 767px) {
+  html,body{
+    padding: 0
+  }
+}
 #wrapper{
     min-height: 100%;
     position:relative;
@@ -29,13 +33,13 @@ footer {
   bottom: 0; 
 }
 .navbar-wrapper {
-position: absolute;
-top: 0;
-left: 0;
-right: 0;
-z-index: 10;
-margin-top: 20px;
-margin-bottom: -90px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  margin-top: 20px;
+  margin-bottom: -90px;
 }
 .carousel-caption {
 //background-color: transparent;
@@ -48,14 +52,22 @@ padding-left: 100px;
   .carousel-caption {
     position: relative;
     padding:60px;
+    min-height: 100px;
+    //background-color: transparent;
     //background-color: gray;
     //top:30px;
     //padding-top:10px;
   }
 }
 .carousel-caption h1, .carousel-caption .lead {
-//margin: 0;
-line-height: 1.75;
-color: #fff;
-text-shadow: 0 1px 1px rgba(0,0,0,.4);
+  //margin: 0;
+  line-height: 1.75;
+  color: #fff;
+  text-shadow: 0 1px 1px rgba(0,0,0,.4);
+}
+@media (max-width: 767px) {
+  .carousel-caption h1, .carousel-caption .lead {
+    //margin: 0;
+    font-size: 18px;
+  }
 }
